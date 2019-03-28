@@ -16,6 +16,7 @@ class Ffmpeg < Formula
   depends_on "texi2html" => :build
 
   depends_on "aom"
+  depedns_on "fdk-aac"
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "frei0r"
@@ -69,6 +70,7 @@ class Ffmpeg < Formula
       --enable-libx265
       --enable-libxvid
       --enable-lzma
+      --enable-libfdk-aac
       --enable-libfontconfig
       --enable-libfreetype
       --enable-frei0r
@@ -85,7 +87,6 @@ class Ffmpeg < Formula
       --enable-libsoxr
       --enable-gpl
       --enable-nonfree
-      --enable-libfdk-aac
     ]
 
     system "./configure", *args
